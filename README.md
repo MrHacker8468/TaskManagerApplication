@@ -29,7 +29,7 @@ npm install
 
 **Option 1**: Use a local MongoDB instance
 - Ensure MongoDB is installed and running on your machine
-- Default connection URL: `mongodb://localhost:27017/task_manager`
+- Default connection URL: `mongodb://localhost:3000`
 
 **Option 2**: Use MongoDB Atlas (cloud database)
 - Create a MongoDB Atlas account

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TaskManager Tests" tests="12" failures="0" errors="0" time="3.237">
+  <testsuite name="API /task Routes" errors="0" failures="0" skipped="0" timestamp="2025-01-25T14:05:45" time="2.065" tests="6">
+    <testcase classname="API /task Routes POST /task should return 500 on server error" name="API /task Routes POST /task should return 500 on server error" time="0.012">
+    </testcase>
+    <testcase classname="API /task Routes POST /task should create task successfully" name="API /task Routes POST /task should create task successfully" time="0.001">
+    </testcase>
+    <testcase classname="API /task Routes GET /task should return 500 on server error" name="API /task Routes GET /task should return 500 on server error" time="0.001">
+    </testcase>
+    <testcase classname="API /task Routes GET /task should fetch tasks successfully" name="API /task Routes GET /task should fetch tasks successfully" time="0.001">
+    </testcase>
+    <testcase classname="API /task Routes DELETE /task should return 500 on server error" name="API /task Routes DELETE /task should return 500 on server error" time="0.001">
+    </testcase>
+    <testcase classname="API /task Routes DELETE /task should delete task successfully" name="API /task Routes DELETE /task should delete task successfully" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="API /task/[id] Routes" errors="0" failures="0" skipped="0" timestamp="2025-01-25T14:05:45" time="2.073" tests="6">
+    <testcase classname="API /task/[id] Routes PUT /task/[id] should update the task successfully" name="API /task/[id] Routes PUT /task/[id] should update the task successfully" time="0.011">
+    </testcase>
+    <testcase classname="API /task/[id] Routes PUT /task/[id] should return 404 if task not found" name="API /task/[id] Routes PUT /task/[id] should return 404 if task not found" time="0.001">
+    </testcase>
+    <testcase classname="API /task/[id] Routes PUT /task/[id] should return 500 on server error" name="API /task/[id] Routes PUT /task/[id] should return 500 on server error" time="0.015">
+    </testcase>
+    <testcase classname="API /task/[id] Routes GET /task/[id] should fetch the task successfully" name="API /task/[id] Routes GET /task/[id] should fetch the task successfully" time="0.002">
+    </testcase>
+    <testcase classname="API /task/[id] Routes GET /task/[id] should return 404 if task not found" name="API /task/[id] Routes GET /task/[id] should return 404 if task not found" time="0.001">
+    </testcase>
+    <testcase classname="API /task/[id] Routes GET /task/[id] should return 500 on server error" name="API /task/[id] Routes GET /task/[id] should return 500 on server error" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
