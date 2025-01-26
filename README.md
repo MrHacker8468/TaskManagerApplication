@@ -61,12 +61,12 @@ The application will be running on `http://localhost:3000`
 ```bash
 npm run test
 ```
+**To View the Report**: Go to the `test-reports` folder and open the `jest-report.html` file in your browser.
 
-### Run tests for specific files or functions (optional)
-
+### Run tests for specific files or functions (optional)    
 ```bash
 npm run test -- <path_to_test_file_or_function>
-```
+``` 
 
 ## Folder Structure
 
