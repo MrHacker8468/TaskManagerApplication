@@ -24,7 +24,18 @@ export async function POST(req) {
 export async function GET(req) {
     try {
         await connectDB();
-        const tasks = await Task.find();
+        const search = req.nextUrl.searchParams.get("search");
+
+        let tasks;
+
+        if (search) {
+            // Perform a case-insensitive search on the "title" field
+            tasks = await Task.find({
+                title: { $regex: search, $options: "i" },
+            });
+        } else {
+            tasks = await Task.find();
+        }
 
         return NextResponse.json({ tasks });
     } catch (error) {
@@ -40,7 +51,7 @@ export async function DELETE(req) {
     try {
         const id = req.nextUrl.searchParams.get("id");
         await connectDB();
-        
+
         const task = await Task.findByIdAndDelete(id);
 
         if (!task) {

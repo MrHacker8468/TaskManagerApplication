@@ -53,21 +53,23 @@ describe("API /task Routes", () => {
     it("should return 500 on server error", async () => {
       connectDB.mockResolvedValueOnce(null);
       Task.find.mockRejectedValueOnce(new Error("Server error"));
-
-      const res = await GET();
-
+  
+      const req = { nextUrl: { searchParams: new URLSearchParams() } };
+      const res = await GET(req);
+  
       expect(res.status).toBe(500);
       expect(await res.json()).toEqual({ message: "Internal Server Error" });
     });
-
+  
     it("should fetch tasks successfully", async () => {
       connectDB.mockResolvedValueOnce(null);
       Task.find.mockResolvedValueOnce([
         { _id: "12345", title: "Task 1", description: "Desc 1", status: "pending" },
       ]);
-
-      const res = await GET();
-
+  
+      const req = { nextUrl: { searchParams: new URLSearchParams() } }; // Mock nextUrl
+      const res = await GET(req);
+  
       expect(res.status).toBe(200);
       expect(await res.json()).toEqual({
         tasks: [
@@ -76,6 +78,7 @@ describe("API /task Routes", () => {
       });
     });
   });
+  
 
   describe("DELETE /task", () => {
     const req = {
