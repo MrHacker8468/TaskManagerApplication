@@ -101,7 +101,7 @@ export default function AddTask() {
               required
             >
               <option value="" disabled>Select status</option>
-              <option value="active">In Progress</option>
+              <option value="In Progress">In Progress</option>
               <option value="completed">Completed</option>
               <option value="pending">Pending</option>
             </select>
